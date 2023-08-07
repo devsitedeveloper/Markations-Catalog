@@ -1,0 +1,206 @@
+.side--nav{
+    width: 315px;
+    height: 100vh;
+    overflow: hidden;
+    background-color: $brandSmoke;
+    z-index: 1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 91;
+    transition: all .4s;
+    @include breakpoint(xl){
+        width: 260px;
+    }
+    .sidenav--top{
+        width: 100%;
+        transition: all .4s;
+        background-color: $brandWhite;
+        height: 100px;
+        display: flex; 
+        align-items: center;
+        padding: 20px;
+        position: relative;
+        justify-content: space-between;
+        .logo-nav{
+            display: inline-block;
+            height: 100%;
+            width: calc(100% - 50px);
+            transition: all .4s;
+            img{
+                width: 60px;
+                height: auto;
+                transition: all .4s;
+            }
+        }
+        .hamburger-icon{
+            width: 35px;
+            margin-left: 15px;
+            @include breakpoint(xl){
+                width: 28px;
+                margin-left: 0px;
+            }
+            span{
+                width: 100%;
+                display: block;
+                height: 3px;
+                background-color: $brandBlack;
+                &:nth-child(2){
+                    margin: 6px 0px;
+                }
+            }
+        }
+    }
+}
+
+.side--menu{
+    width: 100%;
+    padding: 20px;
+    height: calc(100vh - 89px);
+    overflow: auto;
+    @include breakpoint(xl){
+        padding: 15px;
+        height: calc(100vh - 72px);
+    }
+    .menu{
+        width: 100%;
+        padding: 0px;
+        li{
+            list-style: none;
+            padding: 0px 0px 10px 0px;
+            a{
+                display: flex;
+                color: $brandDarkShadeGray;
+                align-items: center;
+                justify-content: flex-start;
+                border-radius: 5px;
+                font-family: $lato-medium;
+                min-height: 45px;
+                padding-right: 40px;
+                @include breakpoint(xl){
+                    min-height: 40px;
+                    padding-right: 35px;
+                }
+                .menu--icon{
+                    max-width: 45px;
+                    min-width: 45px;
+                    height: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    text-align: center;
+                    transition: all 0.5s;
+                    @include breakpoint(xl){
+                        max-width: 35px;
+                        min-width: 35px;
+                    }
+                    img{
+                        width: 20px;
+                        max-height: 24px;
+                        @include breakpoint(xl){
+                            width: 16px;
+                            max-height: 20px;
+                        }
+                    }
+                }
+            }
+            .sub-menu{
+                display: none;
+                padding: 0px;
+                width: 100%;
+                border-radius: 5px;
+                background-color: $brandStorm;
+                padding: 8px;
+                li{
+                    padding: 0px;
+                    a{
+                        padding: 0;
+                        min-height: 45px;
+                        &:hover{
+                            background-color: $brandLightGray;
+                        }
+                    }
+                }
+            }
+            &.menu-item-has-children{
+                position: relative;
+                .sub-menu-icon{
+                    position: absolute;
+                    display: inline-block;
+                    width: 40px;
+                    min-height: 45px;
+                    right: 0;
+                    top: 0;
+                    background-image: url('../images/down_arrow_icon.svg');
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: 8px;
+                    cursor: pointer;
+                    z-index: 1;
+                    transition: all .4s;
+                    @include breakpoint(xl){
+                        min-height: 40px;
+                        width: 35px;
+                    }
+                    &.up-angle{
+                        transform: rotate(180deg);
+                    }
+                }
+            }
+            &.current-menu-item{
+                > a{
+                    background-color: $brandLightGray;
+                }
+            }
+        }
+    }
+}
+
+.unexpand{
+    .side--nav{
+        width: 90px;
+        @include breakpoint(xl){
+            width: 65px;
+        }
+        .sidenav--top{
+            .hamburger-icon{
+                @include breakpoint(xl){
+                    margin-left: 0px;
+                }
+            }
+        }
+        .logo-nav{
+            width: 0px;
+            opacity: 0;
+            display: none;
+            img{
+                transition: all .4s;
+                opacity: 0;
+                display: none;
+            }
+        }
+        .menu{
+            li{
+                a{
+                    
+                    padding: 0px;
+                    color: $brandSmoke;
+                    .menu--icon{
+                        max-width: 52px;
+                        min-width: 52px;
+                        @include breakpoint(xl){
+                            max-width: 32px;
+                            min-width: 32px;
+                        }
+                    }
+                }
+                .sub-menu-icon{
+                    display: none;
+                }
+                .sub-menu{
+                    padding: 0px;
+                }                 
+            }
+        }
+    }
+}

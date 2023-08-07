@@ -1,0 +1,388 @@
+.nav-tabs{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0px;
+    border: 0px;
+    padding-bottom: 40px;
+    .nav-item{
+        list-style: none;
+        padding: 0px;
+        border: 0px;
+        margin-right: 5px;
+        .nav-link{
+            width: auto;
+            padding: 10px 30px;
+            border: 0px;
+            border-radius: 0px;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            background-color: $brandStorm;
+            color: $brandBlackRussian;
+            font-family: $lato-medium;
+            min-width: 150px;
+            text-align: center;
+            font-size: 18px;
+            @include breakpoint(xl){
+                font-size: 16px;
+                padding: 8px 20px;
+                min-width: 120px;
+            }
+            &.active{
+                background-color: $brandBlackRussian;
+                color: $brandWhite;
+            }
+        }
+    }
+}
+
+.data--table-block{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    .datatable--custom-control-block{
+        order: 1;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        padding-bottom: 10px;
+        .dt--cc{
+            width: auto;
+            padding-right: 5px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            label{
+                margin: 0px;
+                display: inline-block;
+                padding-right: 10px;
+                color: $brandDarkShadeGray;
+                @include breakpoint(lg){
+                    padding-right: 7px;
+                }
+                &.lg-label{
+                    font-size: 20px;
+                    @include breakpoint(lg){
+                        font-size: 16px;
+                    }
+                }
+            }
+            .or{
+                display: inline-block;
+                padding-right: 10px;
+                font-weight: $bold;
+            }
+            select, .form-control{
+                line-height: 45px;
+                width: auto;
+                height: 45px;
+                border-radius: 4px;
+                padding: 0px 15px 0px 5px;
+                border: 1px solid $brandDarkShadeGray;
+                margin-right: 10px;
+                @include breakpoint(xl){
+                    height: 40px;
+                    line-height: 40px;
+                    font-size: 14px;
+                }
+                @include breakpoint(lg){
+                    margin-right: 5px;
+                }
+            }
+            .btn{
+                padding: 9.4px 20px;
+                min-width: 100px;
+                margin-right: 10px;
+                @include breakpoint(xl){
+                    padding: 9.4px 15px;
+                    font-size: 14px;
+                }
+                @include breakpoint(lg){
+                    min-width: 80px;
+                    padding: 9.4px 10px;
+                }
+            }
+            .search-block{
+                .search-control{
+                    border: 1px solid $brandDarkShadeGray;
+                    line-height: 45px;
+                    height: 45px;
+                    padding: 0px 15px;
+                    border-radius: 4px;
+                    @include breakpoint(xl){
+                        height: 40px;
+                        line-height: 40px;
+                        font-size: 14px;
+                    }
+                }
+            }
+            .input-group{
+                width: auto;
+                .form-control{
+                    text-align: left;
+                    margin-right: 10px;
+                    width: 130px;
+                    border: 1px solid $brandDarkShadeGray;
+                    line-height: 45px;
+                    height: 45px;
+                    padding: 0px 15px;
+                    border-radius: 4px !important;
+                    @include breakpoint(xl){
+                        line-height: 40px;
+                        height: 40px;
+                        padding: 0px 10px;
+                    }
+                    @include breakpoint(lg){
+                        margin-right: 5px;
+                    }
+                }
+            }
+            .clear--filter{
+                text-decoration: underline;
+            }
+        }
+        .filter--sub-block{
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .two--col-block{
+            width: 100%;
+            .invoice--custom-control{
+                width: auto;
+                padding-top: 0px;
+            }
+        }
+        .create--invoice-btn{
+            .btn{
+                padding: 9.4px 20px;
+                min-width: 100px;
+                @include breakpoint(xl){
+                    padding: 9.4px 15px;
+                    font-size: 14px;
+                }
+                @include breakpoint(lg){
+                    min-width: 80px;
+                    padding: 9.4px 10px;
+                }
+            }
+        }
+    }
+    table.dataTable{
+        order: 2;
+        width: 100%;
+    }
+    .dataTables_wrapper{
+        order: 3;
+        width: 100%;
+        .controls-wrapper{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 20px;
+            .show-table-info{
+                width: auto;
+                display: flex;
+                align-items: center;
+                .dataTables_length{
+                    margin-left: 10px;
+                    label{
+                        text-indent: -9999999px;
+                        font-size: 0px;
+                        display: flex;
+                        select{
+                            text-indent: 0px;
+                            line-height: 45px;
+                            height: 45px;
+                            border-radius: 4px;
+                            padding: 0px 15px 0px 5px;
+                            border: 1px solid $brandDarkShadeGray;
+                            min-width: 70px;
+                            @include breakpoint(xl){
+                                height: 40px;
+                                line-height: 40px;
+                                font-size: 14px;
+                            }
+                        }
+                    }
+                }
+            }
+            .table-pagination{
+                width: auto;
+                .dataTables_paginate{
+                    width: auto;
+                }
+            }
+        }
+    }
+    &.data--filter-block{
+        padding: 0px;
+    }
+}
+
+.full-w-block{
+    width: 100%;
+}
+
+.invoice--custom-control{
+    width: 100%;
+    padding-top: 10px;
+    &.justify-content-end{
+        .dt--cc{
+            padding-right: 0px;
+            padding-left: 15px;
+            @include breakpoint(lg){
+                padding-left: 10px;
+            }
+            select{
+                margin-right: 0px;
+                margin-left: 10px;
+                @include breakpoint(lg){
+                    margin-left: 5px;
+                }
+            }
+        }
+    }
+}
+
+.action-icons{
+    width: auto;
+    display: inline-block;
+    margin-right: 10px;
+    @include breakpoint(xl){
+        margin-right: 8px;
+    }
+    img{
+        width: 18px;
+        @include breakpoint(xl){
+            width: 15px;
+        }
+    }
+    &.invoice-icon{
+        width: 28px;
+        height: 28px;
+        line-height: 24px;
+        border-radius: 50px;
+        text-align: center;
+        @include breakpoint(lg){
+            width: 24px;
+            height: 24px;
+            line-height: 20px;
+        }
+        img{
+            width: 14px;
+            @include breakpoint(lg){
+                width: 12px;
+            }
+        }
+        &.orange-icon{
+            background-color: $brandTopaz;
+        }
+        &.yellow-icon{
+            background-color: $brandYellow;
+        }
+        &.red-icon{
+            background-color: $brandRed;
+        }
+        &.green-icon{
+            background-color: $brandPastelGreen;
+        }
+    }
+}
+
+.pagination{
+    padding: 0px;
+    .page-item{
+        padding: 0px;
+        list-style: none;
+        .page-link{
+            box-shadow: none;
+            color: $brandBlackRussian;
+        }
+        &.active{
+            .page-link{
+                background-color: $brandBlackRussian;
+                color: $brandWhite;
+                border-color: $brandBlackRussian;
+            }
+        }
+    }
+}
+
+.side--modal{
+    width: 400px;
+    max-width: 100%;
+    position: fixed;
+    overflow: auto;
+    height: calc(100vh - 89px);
+    background-color: $brandWhite;
+    top: 89px;
+    z-index: 90;
+    transition: all .4s;
+    padding: 35px;
+    padding-top: 60px;
+    -webkit-box-shadow: -2px 0px 30px 0px rgba(0,0,0,0.08);
+    -moz-box-shadow: -2px 0px 30px 0px rgba(0,0,0,0.08);
+    box-shadow: -2px 0px 30px 0px rgba(0,0,0,0.08);
+    &.right{
+        right: -400px;
+    }
+    &.left{
+        left: -400px;
+    }
+    .side--modal-title{
+        width: 100%;
+        margin-bottom: 25px;
+        h3{
+            font-weight: bold;
+        }
+    }
+    .close-side-modal{
+        position: absolute;
+        top: 25px;
+        right: 35px;
+        width: 30px;
+    }
+    .form--block{
+        .row{
+            margin: 0px -5px;
+            > div{
+                padding: 0px 5px;
+            }
+        }
+    }
+    &.lg-side--modal{
+        width: 720px;
+        &.right{
+            right: -720px;
+        }
+        &.left{
+            left: -720px;
+        }
+    }
+}
+
+.edit--acc-user{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    .acc-un{
+        display: inline-block;
+        vertical-align: middle;
+        color: $brandTuftsBlue;
+        padding-right: 15px;
+        font-family: $lato-medium;
+    }
+}
+
+.for--side-menu{
+    .side--modal{
+        &.right{
+            right: 0px;
+        }
+        &.left{
+            right: 0px;
+        }
+    }
+}

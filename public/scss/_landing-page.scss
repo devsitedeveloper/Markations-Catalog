@@ -1,0 +1,56 @@
+.middle--right-block{
+    width: 100%;
+    padding: 140px 50px 50px 370px;    
+    @include breakpoint(xl){
+        padding: 110px 40px 40px 290px; 
+    }    
+}
+
+.unexpand{
+    .middle--right-block{
+        padding: 140px 50px 50px 135px;
+        transition: all .4s; 
+        @include breakpoint(lg){
+            padding: 120px 30px 50px 95px;
+        }
+    }
+}
+
+.expand{
+    .middle--right-block{        
+        transition: all .4s;     
+    }
+}
+
+.dashboard--portal-boxes{
+    width: 100%;
+    .row{
+        margin: 0px -15px;
+        > div{
+            padding: 0px 10px;
+            padding-bottom: 20px;
+        }
+    }
+    .dashboard-box{
+        width: 100%;
+        height: 100%;
+        min-height: 200px;
+        text-align: center;
+        padding: 15px;
+        position: relative;
+        h2{
+            color: $brandWhite;
+            font-weight: $bold;
+            font-size: 42px;
+            margin-bottom: 10px; 
+        }
+        h4{
+            color: $brandWhite;
+        }
+    }
+}
+ 
+.dashboard--table-block{
+    width: 100%;
+    margin-top: 40px; 
+}

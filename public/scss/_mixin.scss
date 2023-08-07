@@ -1,0 +1,55 @@
+@mixin transition($val) {
+    -webkit-transition: $val;
+    -moz-transition: $val;
+    transition: $val;
+}
+@mixin box-shadow($val) {
+    -webkit-box-shadow: $val;
+    -moz-box-shadow: $val;
+    box-shadow: $val;
+}
+@mixin border-radius($val) {
+    -webkit-border-radius: $val;
+    -moz-border-radius: $val;
+    border-radius: $val;
+}
+@mixin animation($val) {
+    -webkit-animation: $val;
+    -moz-animation: $val;
+    -ms-animation: $val;
+    -o-animation: $val;
+    animation: $val;
+}
+@mixin transform($val) {
+    transform: $val;
+    -o-transform: $val;
+    -ms-transform: $val;
+    -moz-transform: $val;
+    -webkit-transform: $val;
+}
+@mixin breakpoint($class) {
+  @if $class == vs {
+    @media (max-width: 479px) { @content; }
+  }
+  @else if $class == xs {
+    @media (max-width: 639px) { @content; }
+  }
+  @else if $class == sm {
+    @media (max-width: 767px) { @content; }
+  }
+  @else if $class == md {
+    @media (max-width: 1023px) { @content; }
+  }
+  @else if $class == lg {
+    @media (max-width: 1365px) { @content; }
+  }
+  @else if $class == xl {
+    @media (max-width: 1479px) { @content; }
+  }
+  @else if $class == xxl {
+    @media (max-width: 1600px) { @content; }
+  }
+  @else {
+    @warn "Breakpoint mixin supports: vs, xs, sm, md, lg, xl";
+  }
+}

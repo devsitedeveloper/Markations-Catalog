@@ -1,0 +1,15 @@
+.log-content-block{
+    width: 100%;
+    background-color: $brandCatskill;
+    padding: 15px;
+    margin-bottom: 15px;
+    h6{
+        font-weight: $bold;
+        margin-bottom: 7px;
+    }
+    p{
+        &:last-child{
+            margin-bottom: 0px;
+        }
+    }
+}

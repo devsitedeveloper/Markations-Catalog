@@ -1,0 +1,38 @@
+.full--wrapper{
+    width: 100%;
+    min-height: 100vh;
+    background-color: $brandStorm;
+    .vertical--center-wrapper{
+        width: 100%;
+    }
+    .logo{
+        width: 100%;
+        text-align: center;
+        margin-bottom: 40px;
+    }
+    .login--form-block{
+        width: 540px;
+        max-width: 100%;
+        margin: auto;
+        padding: 50px 80px;
+        background-color: $brandWhite;
+        .title{
+            width: 100%;
+            text-align: center;
+            span{
+                font-weight: $bold;
+            }
+        }
+        .bottom--form{
+            width: 100%;
+            padding-top: 10px;
+            a{
+                color: $brandBlackRussian;
+                text-decoration: underline;
+                &:hover{
+                    color: $brandBlackRussian;
+                }
+            }
+        }
+    }
+}
